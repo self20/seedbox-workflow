@@ -6,7 +6,7 @@ INCLUDES="inc"
 . "$INCLUDES"/variables.sh
 
 clear
-cd /tmp/seedbox-worflow
+cd /tmp/seedbox-workflow
 
 echo "Installation de Sickrage"
 echo ""
@@ -38,9 +38,9 @@ service sickrage stop
 sleep 5
 cd /opt/sickrage
 rm config.ini
-cd /tmp/seedbox-worflow/datas
+cd /tmp/seedbox-workflow/datas
 cp config-sickrage.ini $dirsickrage/config.ini
 chown "$usersickrage":"$usersickrage" "$dirsickrage"/config.ini
 service sickrage start
-cd /tmp/seedbox-worflow
-./seedbox-worflow.sh
+cd /tmp/seedbox-workflow
+./seedbox-workflow.sh
