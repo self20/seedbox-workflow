@@ -33,7 +33,9 @@ echo -e "SR_USER=$usersickrage \nSR_HOME=$dirsickrage \nSR_DATA=$dirsickrage \nS
 chown "$usersickrage":"$usersickrage" /etc/default/sickrage
 update-rc.d sickrage defaults
 service sickrage start
+sleep 5
 service sickrage stop
+sleep 5
 rm /opt/sickrage/config.ini
 cp "$script"/datas/config-sickrage.ini "$dirsickrage"/config.ini
 chown "$usersickrage":"$usersickrage" "$dirsickrage"/config.ini
