@@ -38,10 +38,12 @@ INCLUDES="inc"
 # shellcheck source=/dev/null
 . "$INCLUDES"/variables.sh
 
-cd
+cd /tmp
+cd seedbox-workflow
+
 
 # rendre executable les scripts
-chmod +x $script/scripts/*.sh
+chmod +x /tmp/seedbox-workflow/scripts/*.sh
 
 
 # Introduction
