@@ -24,6 +24,12 @@
 # systmd et ca-certificates
 # apt-get install systmd systemd-sysv ca-certificates -y
 # Redémarrage neccesaire.
+#
+# Installation:
+# git clone https://github.com/luniun/seedbox-workflow.git /tmp/seedbox-workflow
+# chmod +x /tmp/seedbox-workflow.sh
+# cd /tmp/
+# ./seedbox-workflow.sh
 
 
 # includes
@@ -31,9 +37,11 @@ INCLUDES="inc"
 # shellcheck source=/dev/null
 . "$INCLUDES"/variables.sh
 
+
 # rendre executable les scripts
 chmod -R +x /tmp/"$script"/*.sh
 clear
+
 
 # Introduction
 echo "### Merci d'utiliser seedbox-workflow"
