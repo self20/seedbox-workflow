@@ -40,7 +40,7 @@ INCLUDES="inc"
 
 
 # rendre executable les scripts
-chmod -R +x "$script"/*.sh
+chmod -R +x "$script"/scripts/*.sh
 clear
 
 
@@ -86,34 +86,34 @@ echo ""
 read -p "Entrer votre choix: " menup
 if [ $menup = "1" ]
 then
-        "$script"/seedbox-install.sh
+        "$script"/scripts/seedbox-install.sh
 elif [ $menup = "2" ]
 then
-        "$script"/sickrage-install.sh
+        "$script"/scripts/sickrage-install.sh
 elif [ $menup = "3" ]
 then
-        "$script"/filebot-install.sh
+        "$script"/scripts/filebot-install.sh
 elif [ $menup = "4" ]
 then
-        "$script"/couchpotato-install.sh
+        "$script"/scripts/couchpotato-install.sh
 elif [ $menup = "5" ]
 then
-        "$script"/tardistart.sh
+        "$script"/scripts/tardistart.sh
 elif [ $menup = "7" ]
 then
-        "$script"/plex.sh
+        "$script"/scripts/plex.sh
 elif [ $menup = "8" ]
 then
-        "$script"/nginx-conf.sh
+        "$script"/scripts/nginx-conf.sh
 elif [ $menup = "9" ]
 then
-        "$script"/certbot.sh
+        "$script"/scripts/certbot.sh
 elif [ $menup = "10" ]
 then
-        "$script"/full-install.sh
+        "$script"/scripts/full-install.sh
 elif [ $menup = "11" ]
 then
-        "$scrip"/user.sh
+        "$scrip"/scripts/user.sh
 elif [ $menup = "0" ]
 then
         clear
