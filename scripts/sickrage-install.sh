@@ -37,7 +37,7 @@ sleep 5
 service sickrage stop
 sleep 5
 rm /opt/sickrage/config.ini
-cp "$script"/datas/config-sickrage.ini "$dirsickrage"/config.ini
+cp $script/datas/config-sickrage.ini $dirsickrage/config.ini
 chown "$usersickrage":"$usersickrage" "$dirsickrage"/config.ini
 service sickrage start
 $exescript
