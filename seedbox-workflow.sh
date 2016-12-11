@@ -41,7 +41,7 @@ INCLUDES="inc"
 cd
 
 # rendre executable les scripts
-chmod +x "$script"/scripts/*.sh
+chmod +x $script/scripts/*.sh
 
 
 # Introduction
