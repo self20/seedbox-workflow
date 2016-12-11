@@ -6,6 +6,7 @@ INCLUDES="inc"
 . "$INCLUDES"/variables.sh
 
 clear
+cd $script
 
 echo "Installation de Sickrage"
 echo ""
@@ -27,7 +28,6 @@ apt-get install git-core python python-cheetah -y
 git clone git://github.com/SickRage/SickRage.git "$dirsickrage"
 cd "$dirsickrage"
 chown -R "$usersickrage":"$usersickrage" "$dirsickrage"
-cd $dirsickrage
 cd runscripts
 cp init.debian /etc/init.d/sickrage
 chmod +x /etc/init.d/sickrage
