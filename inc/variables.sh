@@ -2,5 +2,5 @@
 
 # Variables
 script="/tmp/seedbox-workflow"
-variables="$script/inc/variables.sh"
-exescript="$script/seedbox-workflow.sh
+variables="/tmp/seedbox-workflow/inc/variables.sh"
+exescript="/tmp/seedbox-workflow/seedbox-workflow.sh
