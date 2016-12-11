@@ -4,11 +4,12 @@
 #
 # Contenue: 
 #
-# Bonobo-box "https://github.com/exrat/rutorrent-bonobox"
+# Rutorrent-bonobox "https://github.com/exrat/rutorrent-bonobox"
 # Sickrage "https://github.com/SickRage/SickRage"
 # Couchpotato "https://github.com/CouchPotato/CouchPotatoServer"
 # Plex "https://www.plex.tv/fr/"
 # Filebot "http://www.filebot.net/"
+# Tardistart "https://www.pastoutdesuite.fr/tardistart"
 # H5ai "https://larsjung.de/h5ai/"
 #
 # Multi utilisateurs.
@@ -47,12 +48,14 @@ clear
 echo "### Merci d'utiliser seedbox-workflow"
 echo ""
 echo "## Ce script permet d'installer :"
-echo "                            rutorrent-bonobox (https://github.com/exrat/rutorrent-bonobox)"
-echo "                            Sickrage          (https://github.com/SickRage/SickRage)"
-echo "                            Couchpotato       (https://github.com/sarakha63/persomov)"
-echo "                            Plex Media Server (https://www.plex.tv/fr)"
-echo "                            Filebot           (http://www.filebot.net)"
-echo "                            TardiStart        (https://www.pastoutdesuite.fr/tardistart)"
+echo ""
+echo "rutorrent-bonobox (https://github.com/exrat/rutorrent-bonobox)"
+echo "Sickrage          (https://github.com/SickRage/SickRage)"
+echo "Couchpotato       (https://github.com/sarakha63/persomov)"
+echo "Plex Media Server (https://www.plex.tv/fr)"
+echo "Filebot           (http://www.filebot.net)"
+echo "TardiStart        (https://www.pastoutdesuite.fr/tardistart)"
+echo "H5ai              (https://larsjung.de/h5ai/)
 echo ""
 echo ""
 read -p "Appuyer sur une touche pour continuer ..."
