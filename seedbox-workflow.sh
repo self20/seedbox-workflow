@@ -39,14 +39,14 @@ INCLUDES="inc"
 
 
 # rendre executable les scripts
-chmod -R +x /tmp/"$script"/*.sh
+chmod -R +x "$script"/*.sh
 clear
 
 
 # Introduction
 echo "### Merci d'utiliser seedbox-workflow"
 echo ""
-echo '## Ce script permet d'installer :'
+echo "## Ce script permet d'installer :"
 echo "                            rutorrent-bonobox (https://github.com/exrat/rutorrent-bonobox)"
 echo "                            Sickrage          (https://github.com/SickRage/SickRage)"
 echo "                            Couchpotato       (https://github.com/sarakha63/persomov)"
