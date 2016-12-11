@@ -69,44 +69,54 @@ echo "1.  installation de Rutorrent-bonobox"
 echo "2.  installation de Sickrage"
 echo "3.  installation de Filebot"
 echo "4.  Installation de Couchpotato"
+echo "5.  Installation de Tardistart"
+echo "6.  Installation de h5ai"
+echo "7.  Installation de plex"
 echo " "
-echo "5.  Installation Config Nginx"
-echo "6.  Installation de Cerbot"
+echo "8.  Installation Config Nginx"
+echo "9.  Installation de Cerbot"
 echo ""
-echo "7.  Installation Complete"
-echo " "
-echo "9.  Reboot"
+echo "10.  Installation Complete"
+echo ""
+echo "11. Ajout\/modifier Utilisateur"
+echo ""
 echo "0.  Exit"
 echo ""
 echo ""
-read -p "Entrer votre choix: " menu
-if [ $menu = "1" ]
+read -p "Entrer votre choix: " menup
+if [ $menup = "1" ]
 then
         "$script"/seedbox-install.sh
-elif [ $menu = "2" ]
+elif [ $menup = "2" ]
 then
         "$script"/sickrage-install.sh
-elif [ $menu = "3" ]
+elif [ $menup = "3" ]
 then
         "$script"/filebot-install.sh
-elif [ $menu = "4" ]
+elif [ $menup = "4" ]
 then
         "$script"/couchpotato-install.sh
-elif [ $menu = "5" ]
+elif [ $menup = "5" ]
+then
+        "$script"/tardistart.sh
+elif [ $menup = "7" ]
+then
+        "$script"/plex.sh
+elif [ $menup = "8" ]
 then
         "$script"/nginx-conf.sh
-elif [ $menu = "6" ]
+elif [ $menup = "9" ]
 then
         "$script"/certbot.sh
-elif [ $menu = "7" ]
+elif [ $menup = "10" ]
 then
         "$script"/full-install.sh
-elif [ $menu = "9" ]
+elif [ $menup = "11" ]
 then
-        reboot
-elif [ $menu = "0" ]
+        "$scrip"/user.sh
+elif [ $menup = "0" ]
 then
-        clear echo "Bye"
+        clear
 else
         echo "Bye Bye"
 fi
