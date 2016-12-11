@@ -27,8 +27,8 @@
 #
 # Installation:
 # git clone https://github.com/luniun/seedbox-workflow.git /tmp/seedbox-workflow
-# chmod +x /tmp/seedbox-workflow.sh
-# cd /tmp/
+# chmod +x /tmp/seedbox-workflow/seedbox-workflow.sh
+# cd /tmp/seedbox-workflow/
 # ./seedbox-workflow.sh
 
 
