@@ -1,12 +1,9 @@
 #!/bin/bash
 #
 # includes
-INCLUDES="inc"
-# shellcheck source=/dev/null
-. "$INCLUDES"/variables.sh
+"$script"/inc/variables.sh
 
 clear
-cd /tmp/seedbox-workflow
 
 echo "Installation de Sickrage"
 echo ""
@@ -28,19 +25,18 @@ apt-get install git-core python python-cheetah -y
 git clone git://github.com/SickRage/SickRage.git "$dirsickrage"
 cd "$dirsickrage"
 chown -R "$usersickrage":"$usersickrage" "$dirsickrage"
-cp runscripts/init.debian /etc/init.d/sickrage
+cp "$dirsickrage"/runscripts/init.debian /etc/init.d/sickrage
 chmod +x /etc/init.d/sickrage
+chown "$usersickrage":"$usersickrage" /etc/init.d/sickrage
 echo -e "SR_USER=$usersickrage \nSR_HOME=$dirsickrage \nSR_DATA=$dirsickrage \nSR_GROUP=$usersickrage" >> /etc/default/sickrage
 update-rc.d sickrage defaults
 service sickrage start
 sleep 5
 service sickrage stop
 sleep 5
-cd /opt/sickrage
-rm config.ini
-cd /tmp/seedbox-workflow/datas
-cp config-sickrage.ini $dirsickrage/config.ini
+cd "$script"/datas
+cp config-sickrage.ini "$dirsickrage"/config.ini
 chown "$usersickrage":"$usersickrage" "$dirsickrage"/config.ini
 service sickrage start
-cd /tmp/seedbox-workflow
+cd "$script"
 ./seedbox-workflow.sh
