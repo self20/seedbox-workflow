@@ -3,6 +3,8 @@
 # includes
 script="/tmp/seedbox-workflow"
 "$script"/inc/variables.sh
+# shellcheck source=/dev/null
+. "$script"/inc/func.sh
 
 clear
 
@@ -18,6 +20,17 @@ read -p "Chemin d'installation: " dirsickrage
 # Choix utilisateur
 read -p "Entrer l'utilisateur qui executera sickrage: " usersickrage
 #echo -e "usersickrage=\"$usersickrage\"" >> "$variables"
+
+# variable utilisateur majuscule
+			USERMAJ=$(echo "$usersickrage" | tr "[:lower:]" "[:upper:]")
+      
+# calcul port
+			FONCPORT
+      
+
+# configuration user rutorrent.conf
+			sed -i '$d' "$NGINXENABLE"/rutorrent.conf
+			FONCRTCONF "$USERMAJ"  "$PORT" "$usersickrage"
 
 # installation dépendances
 apt-get install git-core python python-cheetah -y
