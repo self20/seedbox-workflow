@@ -55,7 +55,7 @@ echo "Couchpotato       (https://github.com/sarakha63/persomov)"
 echo "Plex Media Server (https://www.plex.tv/fr)"
 echo "Filebot           (http://www.filebot.net)"
 echo "TardiStart        (https://www.pastoutdesuite.fr/tardistart)"
-echo "H5ai              (https://larsjung.de/h5ai/)
+echo "H5ai              (https://larsjung.de/h5ai/)"
 echo ""
 echo ""
 read -p "Appuyer sur une touche pour continuer ..."
