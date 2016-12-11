@@ -2,7 +2,7 @@
 #
 # Script d'installation d'une seedbox workflow.
 #
-# Contenue: 
+# Contenue:
 #
 # Rutorrent-bonobox "https://github.com/exrat/rutorrent-bonobox"
 # Sickrage "https://github.com/SickRage/SickRage"
@@ -12,7 +12,7 @@
 # Tardistart "https://www.pastoutdesuite.fr/tardistart"
 # H5ai "https://larsjung.de/h5ai/"
 #
-# 
+#
 # Installation pas a pas ou complete.
 #
 # Auteur: Luniun
@@ -38,12 +38,8 @@ INCLUDES="inc"
 # shellcheck source=/dev/null
 . "$INCLUDES"/variables.sh
 
-cd /tmp
-cd seedbox-workflow
-
-
 # rendre executable les scripts
-chmod +x /tmp/seedbox-workflow/scripts/*.sh
+chmod +x "$script"/scripts/*.sh
 
 
 # Introduction
@@ -85,41 +81,47 @@ echo ""
 echo "0.  Exit"
 echo ""
 echo ""
-read -p "Entrer votre choix: " menup
-if [ $menup = "1" ]
-then
-        "$script"/scripts/seedbox-install.sh
-elif [ $menup = "2" ]
-then
-        "$script"/scripts/sickrage-install.sh
-elif [ $menup = "3" ]
-then
-        "$script"/scripts/filebot-install.sh
-elif [ $menup = "4" ]
-then
-        "$script"/scripts/couchpotato-install.sh
-elif [ $menup = "5" ]
-then
-        "$script"/scripts/tardistart.sh
-elif [ $menup = "7" ]
-then
-        "$script"/scripts/plex.sh
-elif [ $menup = "8" ]
-then
-        "$script"/scripts/nginx-conf.sh
-elif [ $menup = "9" ]
-then
-        "$script"/scripts/certbot.sh
-elif [ $menup = "10" ]
-then
-        "$script"/scripts/full-install.sh
-elif [ $menup = "11" ]
-then
-        "$scrip"/scripts/user.sh
-elif [ $menup = "0" ]
-then
-        clear
-else
-        echo "Bye Bye"
-fi
-exit
+read -p "Entrer votre choix: " CHOIX
+
+case $CHOIX  in
+		0)
+			exit 0
+			;;
+		1)
+			"$script"/scripts/seedbox-install.sh
+			;;
+		2)
+			"$script"/scripts/sickrage-install.sh
+			;;
+		3)
+			"$script"/scripts/filebot-install.sh
+			;;
+		4)
+			"$script"/scripts/couchpotato-install.sh
+			;;
+		5)
+			"$script"/scripts/tardistart.sh
+			;;
+		6)
+			"$script"/scripts/tardistart.sh
+			;;
+		7)
+			"$script"/scripts/plex.sh
+			;;
+		8)
+			"$script"/scripts/nginx-conf.sh
+			;;
+		9)
+			"$script"/scripts/certbot.sh
+			;;
+		10)
+			"$script"/scripts/full-install.sh
+			;;
+		11)
+			"$scrip"/scripts/user.sh
+			;;
+		*)
+			echo "Mauvais choix"
+			;;
+	esac
+exit 1
