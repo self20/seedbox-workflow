@@ -29,7 +29,7 @@ chown -R "$usersickrage":"$usersickrage" "$dirsickrage"
 cp "$dirsickrage"/runscripts/init.debian /etc/init.d/sickrage
 chmod +x /etc/init.d/sickrage
 chown "$usersickrage":"$usersickrage" /etc/init.d/sickrage
-echo -e "SR_USER=$usersickrage \nSR_HOME=$dirsickrage \nSR_DATA=$dirsickrage \nSR_GROUP=$usersickrage" >> /etc/default/sickrage
+echo -e "SR_USER=$usersickrage \nSR_HOME=$dirsickrage/ \nSR_DATA=$dirsickrage/ \nSR_GROUP=$usersickrage" >> /etc/default/sickrage
 update-rc.d sickrage defaults
 service sickrage start
 sleep 5
