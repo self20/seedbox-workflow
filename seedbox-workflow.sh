@@ -12,7 +12,7 @@
 # Tardistart "https://www.pastoutdesuite.fr/tardistart"
 # H5ai "https://larsjung.de/h5ai/"
 #
-# Multi utilisateurs.
+# 
 # Installation pas a pas ou complete.
 #
 # Auteur: Luniun
