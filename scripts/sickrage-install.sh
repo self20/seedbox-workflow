@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # includes
+script="/tmp/seedbox-workflow.sh"
 "$script"/inc/variables.sh
 
 clear
