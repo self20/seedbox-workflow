@@ -128,18 +128,6 @@ server {
         ## fin config seedbox-manager ##
 
         ## config utilisateurs  ##
-
-        location /MANAGER {
-            include scgi_params;
-            scgi_pass 127.0.0.1:5001; #ou socket : unix:/home/username/.session/username.socket
-            auth_basic "seedbox";
-            auth_basic_user_file "/etc/nginx/passwd/rutorrent_passwd_manager";
-        }
-
-        location /CONTYTEAM {
-            include scgi_params;
-            scgi_pass 127.0.0.1:5003; #ou socket : unix:/home/username/.session/username.socket
-            auth_basic "seedbox";
-            auth_basic_user_file "/etc/nginx/passwd/rutorrent_passwd_contyteam";
-        }
-}
+        
+        
+        
