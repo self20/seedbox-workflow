@@ -14,7 +14,7 @@ read -p "Appuyer sur une touche pour continuer ..."
 
 # choix chemin d'installation
 read -p "Chemin d'installation: " dirsickrage
-echo -e "dirsickrage=\""$dirsickrage"\" >> "$variables"
+echo -e "dirsickrage=$dirsickrage" >> "$variables"
 
 # Choix utilisateur
 read -p "Entrer l'utilisateur qui executera sickrage: " usersickrage
