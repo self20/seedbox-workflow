@@ -23,10 +23,9 @@ read -p "Entrer l'utilisateur qui executera sickrage: " usersickrage
 
 # variable utilisateur majuscule
 			USERMAJ=$(echo "$usersickrage" | tr "[:lower:]" "[:upper:]")
-      
+
 # calcul port
 			FONCPORT
-      
 
 # configuration user rutorrent.conf
 			sed -i '$d' "$NGINXENABLE"/rutorrent.conf
