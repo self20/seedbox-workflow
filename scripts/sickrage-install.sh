@@ -19,17 +19,6 @@ read -p "Chemin d'installation: " dirsickrage
 
 # Choix utilisateur
 read -p "Entrer l'utilisateur qui executera sickrage: " usersickrage
-#echo -e "usersickrage=\"$usersickrage\"" >> "$variables"
-
-# variable utilisateur majuscule
-			USERMAJ=$(echo "$usersickrage" | tr "[:lower:]" "[:upper:]")
-
-# calcul port
-			FONCPORT
-
-# configuration user rutorrent.conf
-			sed -i '$d' "$NGINXENABLE"/rutorrent.conf
-			FONCRTCONF "$USERMAJ"  "$PORT" "$usersickrage"
 
 # installation dépendances
 apt-get install git-core python python-cheetah -y
@@ -38,9 +27,13 @@ apt-get install git-core python python-cheetah -y
 git clone git://github.com/SickRage/SickRage.git "$dirsickrage"
 cd "$dirsickrage"
 chown -R "$usersickrage":"$usersickrage" "$dirsickrage"
+
+# copie script demarrage et droit 
 cp "$dirsickrage"/runscripts/init.debian /etc/init.d/sickrage
 chmod +x /etc/init.d/sickrage
 chown "$usersickrage":"$usersickrage" /etc/init.d/sickrage
+
+# creation config demarrage 
 echo -e "SR_USER=$usersickrage \nSR_HOME=$dirsickrage/ \nSR_DATA=$dirsickrage/ \nSR_GROUP=$usersickrage" >> /etc/default/sickrage
 update-rc.d sickrage defaults
 service sickrage start
