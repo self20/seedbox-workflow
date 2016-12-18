@@ -44,5 +44,10 @@ cd "$script"/datas
 cp config-sickrage.ini "$dirsickrage"/config.ini
 chown "$usersickrage":"$usersickrage" "$dirsickrage"/config.ini
 service sickrage start
+
+# ajout a rutorrent.conf
+
+sed -i '/fin config rutorrent/ a \\t## début config sickrage ##\nlocation /sickrage {\nproxy_pass        http://127.0.0.1:8081;\nproxy_redirect    off;\nproxy_set_header  Host             $http_host;\nproxy_set_header  X-Real-IP        $remote_addr;\nproxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;\n}' /etc/nginx/sites-enabled/rutorrent.conf
+service nginx restart
 cd "$script"
 ./seedbox-workflow.sh
