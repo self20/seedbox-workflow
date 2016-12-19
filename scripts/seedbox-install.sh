@@ -27,4 +27,5 @@ chmod a+x bonobox.sh && ./bonobox.sh
 read -p "Appuyer sur une touche pour continuer ..."
 
 # Retour au Menu principal
-/"$script"/seedbox-workflow.sh
+cd /tmp/seedbox-workflow
+./seedbox-workflow.sh

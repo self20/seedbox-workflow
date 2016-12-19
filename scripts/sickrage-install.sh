@@ -3,8 +3,6 @@
 # includes
 script="/tmp/seedbox-workflow"
 "$script"/inc/variables.sh
-# shellcheck source=/dev/null
-. "$script"/inc/func.sh
 
 clear
 
@@ -12,12 +10,14 @@ echo "Installation de Sickrage"
 echo ""
 echo "Attention l'utilisateur de sickrage doit correspondre a celui de rtorrent."
 read -p "Appuyer sur une touche pour continuer ..."
+echo ""
+echo ""
 
 # choix chemin d'installation
 read -p "Chemin d'installation: " dirsickrage
-#echo -e "dirsickrage=\"$dirsickrage\"" >> "$variables"
 
 # Choix utilisateur
+echo ""
 read -p "Entrer l'utilisateur qui executera sickrage: " usersickrage
 
 # installation dépendances
