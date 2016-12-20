@@ -106,7 +106,7 @@ case $CHOIX  in
 			"$script"/scripts/h5ai.sh
 			;;
 		7)
-			"$script"/scripts/plex.sh
+			"$script"/scripts/plex-install.sh
 			;;
 		8)
 			"$script"/scripts/nginx-conf.sh
