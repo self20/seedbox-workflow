@@ -103,7 +103,7 @@ case $CHOIX  in
 			"$script"/scripts/tardistart.sh
 			;;
 		6)
-			"$script"/scripts/tardistart.sh
+			"$script"/scripts/h5ai.sh
 			;;
 		7)
 			"$script"/scripts/plex.sh
