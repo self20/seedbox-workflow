@@ -3,6 +3,10 @@
 # includes
 script="/tmp/seedbox-workflow"
 "$script"/inc/variables.sh
+# includes
+INCLUDES="inc"
+# shellcheck source=/dev/null
+. "$INCLUDES"/variables.sh
 
 # installation dependances
 apt-get install git-core python python-cheetah -y
