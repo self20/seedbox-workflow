@@ -29,5 +29,7 @@ service couchpotato start
 service couchpotato stop
 sed -i '/fin config sickrage/ a \\t## début config couchpotato ##\nlocation /couchpotato {\nproxy_pass http://127.0.0.1:5050;\nproxy_set_header Host $host;\nproxy_set_header X-Real-IP $remote_addr;\nproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n}\n\t## fin config couchpotato ##' /etc/nginx/sites-enabled/rutorrent.conf
 sed -i "s/url_base =/url_base = \/couchpotato/" /var/opt/couchpotato/settings.conf
+service couchpotato start
+service nginx restart
 cd "$script"
 ./seedbox-workflow.sh
