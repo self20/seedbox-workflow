@@ -20,7 +20,10 @@ read -p "Chemin d'installation: " dirsickrage
 cd "$script"
 echo ""
 read -p "Entrer l'utilisateur qui executera sickrage: " usersickrage
-echo -e "usersickrage=\"$usersickrage\"" >> inc/variables.sh
+#echo -e "usersickrage=\"$usersickrage\"" >> inc/variables.sh
+echo -e "usersickrage=\"$usersickrage\"" >> /root/.profile
+source ~/.profile
+
 
 # installation dépendances
 apt-get install git-core python python-cheetah -y
