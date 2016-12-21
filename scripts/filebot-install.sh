@@ -30,7 +30,7 @@ chown "$usersickrage":"$usersickrage" /home/"$usersickrage"/Media
 chmod 755 /home/"$usersickrage"/Media
 
 # script reliant rtorrent a filebot
-cp /tmp/"$script"/datas/rtorrent-postprocess /home/"$usersickrage"/rtorrent-postprocess
+cp "$script"/datas/rtorrent-postprocess /home/"$usersickrage"/rtorrent-postprocess
 chown "$usersickrage":"$usersickrage" /home/"$usersickrage"/rtorrent-postprocess
 chmod a+x /home/"$usersickrage"/rtorrent-postprocess
 echo -e "system.method.set_key=event.download.finished,filebot_amc,\"execute={/home/$usersickrage/rtorrent-postprocess,$d.get_base_path=,$d.get_name=,$d.get_custom1=}\"" >> /home/$contyteam/.rtorrent.rc
