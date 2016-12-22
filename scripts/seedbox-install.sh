@@ -26,6 +26,11 @@ cd rutorrent-bonobox
 chmod a+x bonobox.sh && ./bonobox.sh
 read -p "Appuyer sur une touche pour continuer ..."
 
+# script de redemmarage rtorrent
+cd /tmp/seedbox-workflow
+cp datas/restart-rtorrent.sh /home/"$usersickrage"/
+chmod +x /home/"$usersickrage"/restart-rtorrent.sh
+
 # Retour au Menu principal
 cd /tmp/seedbox-workflow
 ./seedbox-workflow.sh
