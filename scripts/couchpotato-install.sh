@@ -25,6 +25,15 @@ chmod +x /etc/init.d/couchpotato
 update-rc.d couchpotato defaults
 service couchpotato start
 
+# ajout t411
+service couchpotato stop
+cd /tmp
+git clone https://github.com/djoole/couchpotato.provider.t411.git /tmp/t411
+cd t411
+cp -r t411 /var/opt/couchpotato/custom_plugins
+chown "$usersickrage":"$usersickrage" /var/opt/couchpotato/custom_plugins/t411
+service couchpotato stop
+
 # proxy nginx
 service couchpotato stop
 sed -i '/fin config sickrage/ a \\t## début config couchpotato ##\nlocation /couchpotato {\nproxy_pass http://127.0.0.1:5050;\nproxy_set_header Host $host;\nproxy_set_header X-Real-IP $remote_addr;\nproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n}\n\t## fin config couchpotato ##' /etc/nginx/sites-enabled/rutorrent.conf
