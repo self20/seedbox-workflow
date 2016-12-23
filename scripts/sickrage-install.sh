@@ -23,6 +23,7 @@ read -p "Entrer l'utilisateur qui executera sickrage: " usersickrage
 #echo -e "usersickrage=\"$usersickrage\"" >> inc/variables.sh
 echo -e "usersickrage=\"$usersickrage\"" >> /root/.profile
 source ~/.profile
+export usersickrage="$usersickrage"
 
 
 # installation dépendances
